@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Restaurant - Home</title>
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fff8f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== HEADER & NAV ===== */
+        header {
+            background: #fff;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            padding: 6px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background: #d9534f;
+            color: #fff;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: 100vh;
+            background: url('image.jpg.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #d9534f, #ff7b5a);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #d9534f;
+        }
+
+        /* About Section */
+        .about-home .btn {
+            margin-top: 15px;
+        }
+
+        /* Popular Menu */
+        .menu-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .menu-box {
+            background: #fff;
+            width: 250px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .menu-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #d9534f;
+        }
+
+        .menu-box p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Services */
+        .services ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .services li {
+            background: #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .services li:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Gallery Section */
+        .gallery-home .btn {
+            margin-top: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #d9534f;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 42px; }
+            .hero p { font-size: 18px; }
+            .menu-boxes { flex-direction: column; align-items: center; }
+            nav ul { flex-direction: column; gap: 15px; background: #fff; position: absolute; top: 60px; right: 20px; padding: 20px; border-radius: 10px; display: none; }
+            nav ul.show { display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">ROYAL Restaurant</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="service.html">Service</a></li> 
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to Royal Restaurant</h1>
+    <p>Delicious Food • Family Environment • Best Taste</p>
+    <a href="menu.html" class="btn">View Menu</a>
+</div>
+
+<!-- About Preview -->
+<section class="about-home">
+    <h2>About Us</h2>
+    <p>Royal Restaurant offers delicious food with a family-friendly environment. Experience the best taste in town!</p>
+    <a href="about.html" class="btn">Read More</a>
+</section>
+
+<!-- Popular Menu -->
+<section class="menu-home">
+    <h2>Popular Dishes</h2>
+    <div class="menu-boxes">
+        <div class="menu-box">
+            <h3>Chicken Biryani</h3>
+            <p>Rs. 350</p>
+        </div>
+        <div class="menu-box">
+            <h3>BBQ Tikka</h3>
+            <p>Rs. 450</p>
+        </div>
+        <div class="menu-box">
+            <h3>Karahi</h3>
+            <p>Rs. 900</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Dine In</li>
+        <li>Take Away</li>
+        <li>Home Delivery</li>
+        <li>Family Hall</li>
+    </ul>
+</section>
+
+<!-- Gallery Preview -->
+<section class="gallery-home">
+    <h2>Our Gallery</h2>
+    <a href="gallery.html" class="btn">View Gallery</a>
+</section>
+
+<footer>
+    <p>© 2026 Nawabshah Restaurant | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
